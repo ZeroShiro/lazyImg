@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin:0;
+        }
+        .imgbox{
+            margin: 0 auto;
+            width: 400px;
+        }
+        ul {
+            margin: 20px auto;
+            width: 200px;
+            list-style: none;
+        }
+        ul > li{
+            width: 200px;
+            height: 200px;
+            padding: 10px;
+            margin-bottom: 100px;
+            border: 1px solid orange;
+        }
+        ul > li > img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    <script src="lazyImg.js"></script>
+
+  </head>
+
+  <body>
+    <div class="imgbox">
+      <ul>
+        <li><img src="./imgs/mr.jpg" data-src="./imgs/1.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/2.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/3.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/4.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/5.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/6.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/7.jpg" alt="" /></li>
+        <li><img src="#" data-src="./imgs/8.jpg" alt="" /></li>
+      </ul>
+    </div>
+    
+    <script>
+      let imgs = document.querySelectorAll("img"); //伪数组
+
+      initLazyImg.init(imgs, "./imgs/mr.jpg");
+
+    </script>
+  </body>
+</html>
