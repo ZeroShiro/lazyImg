@@ -19,7 +19,6 @@ let initLazyImg = {
   findImgs: function() {
     for (let i = 0; i < this.imgs.length; i++) {
       let img = this.imgs[i];
-      this.loadImg(img);
       if (this.loadImg(img)) {
         this.imgs.splice(i, 1);
         i--;
